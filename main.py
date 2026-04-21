@@ -21,9 +21,7 @@ print("Dane przygotowane!")
 class NumAnalyzer(nn.Module):
     def __init__(self):
         super().__init__()
-        # KROK 1: Zdefiniuj 3 warstwy liniowe (self.fc1, self.fc2, self.fc3)
-        # Pamiętaj: wejście to 784, a ostateczne wyjście to 10.
-        # Wymiary "w środku" zależą od Ciebie, np. 128 i 64.
+
 
         self.fc1 = nn.Linear(784, 128)
         self.fc2 = nn.Linear(128,128)
@@ -80,17 +78,13 @@ def trainingLoop(epochs=3):
             #updates weights and biases
             optimizer.step()
 
-            # liczymy średnią
-            # etoda .item() wyciąga czystą liczbę z Tensora PyTorcha
+
             error_sum += loss.item()
 
-            # Podsumowanie po każdym epochu
         avg_error = error_sum / len(loader)
         print(f"Epoch [{epoch + 1}/{epochs}] | avg loss: {avg_error:.4f}")
 def tests():
-    # --- TEST: Sprawdźmy, czy potrafisz wyciągnąć dane z loadera ---
 
-    # DataLoader to tzw. generator. Żeby wyciągnąć z niego JEDNĄ paczkę ręcznie, używamy:
     loader = Formatter()
     data_iter = iter(loader)
     images, labels = next(data_iter)
@@ -139,6 +133,3 @@ if not load_model(model):
 
 Inference(loader)
 
-# Po zakończeniu trainingLoop(3), wywołaj egzamin:
-# loader_do_testow = Formatter() # (lub użyj globalnego loadera, jeśli go poprawiłeś)
-# egzamin(loader_do_testow)
