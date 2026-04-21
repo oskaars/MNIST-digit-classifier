@@ -10,7 +10,7 @@ This project is a complete, from-scratch implementation of an Artificial Neural 
 * **Persistence (Save/Load):** The script automatically saves the trained `state_dict` (`mnist_brain.pth`) after training. On subsequent runs, it loads the pre-trained weights, skipping the training phase.
 * **Inference & Visualization:** Uses `matplotlib` to randomly sample a test image, run it through the network with gradient tracking disabled (`torch.no_grad()`), and visually display the AI's prediction versus the ground truth.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Python 3.x**
 * **PyTorch** (`torch`, `torch.nn`, `torch.optim`)
