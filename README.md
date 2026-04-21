@@ -2,7 +2,7 @@
 
 This project is a complete, from-scratch implementation of an Artificial Neural Network designed to recognize handwritten digits using the **PyTorch** library. It serves as a foundational project in Computer Vision, classifying 28x28 pixel images from the classic MNIST dataset into one of 10 categories (digits 0-9).
 
-## ✨ Key Features
+## Key Features
 
 * **Custom Multilayer Perceptron (MLP):** A fully connected feed-forward neural network architecture (`784 -> 128 -> 128 -> 10`) utilizing `ReLU` activation functions.
 * **Automated Data Pipeline:** Utilizes `torchvision.datasets` and `DataLoader` to automatically download, normalize (-1.0 to 1.0), and batch the dataset for optimized training.
@@ -17,7 +17,7 @@ This project is a complete, from-scratch implementation of an Artificial Neural 
 * **Torchvision** (Data transformation and MNIST dataset access)
 * **Matplotlib** (Visualizing the inference results)
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Install Dependencies
 Ensure you have an active virtual environment, then install the required libraries:
